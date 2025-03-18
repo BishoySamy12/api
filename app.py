@@ -2,6 +2,13 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+async def root():
+    return {"message": "API is running!"}
 
 # تحميل الموديل من Hugging Face
 MODEL_NAME = "bishoy1/swimming_coach"  # استبدل باسم الموديل الخاص بك
