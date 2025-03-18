@@ -1,4 +1,6 @@
 fastapi
-uvicorn
-transformers
+pydantic
 torch
+transformers
+uvicorn
+bitsandbytes
